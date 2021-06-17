@@ -3,16 +3,11 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [item, setItem]=useState({
-    username:"Unknown",
-    pwd:"Password"
+  const [item, setItem] = useState({
+    username: "Unknown",
+    pwd: "Password"
   })
-  Change=()=>{
-    setItem({
-      username:"YourWebsite",
-    pwd:"12345678"
-    })
-  }
+
 
   return (
     <div className="App">
@@ -20,7 +15,10 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <label>UserName:{item.username}</label>
         <label>Password:{item.pwd}</label>
-        <button onClick={this.Change}>Onchange</button>
+        <button varient="primary" onClick={() => setItem({
+          username: "YourWebsite",
+          pwd: "12345678"
+        })}>Change URL</button>
       </header>
     </div>
   );
